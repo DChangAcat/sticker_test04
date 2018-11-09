@@ -1,12 +1,7 @@
-#  iOS Stickers Apps for WhatsApp
+#  LoveQuest Stickers Apps for WhatsApp
 
 
-## Overview
-If you would like to design your own stickers for WhatsApp, you can package them in an iOS app. You will need to distribute your app via the App Store. Users who download and install your sticker app will be able to add your stickers to their WhatsApp sticker picker/tray, and start sending those stickers from within WhatsApp. A separate app is necessary and it will reside on your phone's home screen just like any other app. Once you add the stickers from the app to WhatsApp, you can remove or uninstall the app from your phone and continue to send those stickers. Stickers on WhatsApp must be legal, authorized, and acceptable.  Learn more about acceptable use of our services at <https://www.whatsapp.com/legal/#terms-of-service>.
 
-The sample code provides a simple way for you to drop in your sticker art and build an iOS app with minimal development or coding experience needed. For advanced developers looking to make richer sticker apps, refer to the section [Advanced Development](#advanced-development) below. 
-
-We recommend you create a version of your sticker app for Android as well to give users of WhatsApp on Android an opportunity to download your sticker app as well.
 
 ## Sticker art and app requirements
 We recommend you refer to the FAQ at https://faq.whatsapp.com/general/26000226 for complete details on how to properly create your sticker art. This FAQ also contains a sample PSD that demonstrates best practices for composing legible, rich sticker art.
@@ -29,35 +24,10 @@ stickers
 * This image should be 96 x 96 pixels
 * Max file size of 50KB
 
-### Tips for reducing file size
-We recommend reducing the size of each of your stickers. For reference, many of the stickers provided within WhatsApp are around 15KB each. The smaller your stickers, the faster they will send and the less data your users will have to spend sending them or downloading your app. Depending on your art and the type of graphics you've created, one of these two methods may result in smaller file sizes so we recommend experimenting with both. 
-
-* The first method involves optimizing your PNGs using a PNG optimizer tool. If you're on MacOS, use https://pngmini.com. We recommend using Median Cut and adjusting the colors bar to reduce the size. Then, convert them to WebP using the methods described in the [Converting to WebP](#converting-to-webp) section.
-* The second method involves saving or converting your stickers as WebP while experimenting with the WebP export settings trying to optimize the  images. You should try setting the quality of your WebP output to something lower than 100% and experiment with a quality level that gets you the smallest file size possible without noticeable image degradation. EEach of the methods described in [Converting to WebP](#converting-to-webp) for exporting your files to WebP offer ways to control your resolution.
-
-### Converting to WebP
-Your sticker art must be in the WebP format. We recommend using the tools you're most comfortable with to draw and compose your art, and converting them to WebP using one of a few different tools:
-
-* Sketch for Mac lets you export files as WebP. Open your sticker art file in Sketch, select a layer, multiple layers, or an artboard, and select Make Exportable in the bottom right. Pick your format as WebP, select Export, and then select the quality/resolution.
-* [Android Studio](https://developer.android.com/studio/) allows you to convert PNGs to WebP. Simply create a New Project in Android Studio, open your PNG and right click on the image and select convert to WebP ([https://developer.android.com/studio/write/convert-webp](https://developer.android.com/studio/write/convert-webp)). Make sure you uncheck the box next to "Skip images with transparency/alpha channel" in the export flow.
-* You can install a [plugin](https://github.com/fnordware/AdobeWebM#download) for Photoshop that converts to WebP
-* Use [cwebp](https://developers.google.com/speed/webp/), a command line tool
-
-## How to create a sticker app
-
 ### Overview
-If you would like to create a sticker app using the sample app, you only have to minimally modify the sample app to get up and running quickly. 
 
-* After downloading this repo, open the `WAStickersThirdParty.xcodeproj` file with [Xcode](https://itunes.apple.com/us/app/xcode/id497799835).
-* Remove the current sample stickers from the `SampleStickers` folder in Xcode
 * Drag your sticker images inside the `SampleStickers` folder in Xcode
 * A window appears every time you drag an image into Xcode. Make sure that "Copy items if needed" and the `WAStickersThirdParty` target are checked.
-
-### Important note about using PNG images
-Xcode does some optimizations to every PNG image that is imported. This can lead to files becoming bigger in size and not passing our image size requirement. To prevent this, select the PNG file from the left sidebar and go to the right sidebar and select the first tab (to the left of the question mark button). On the "Type" drop down menu, select "Data". Do this for all of your PNG images (WebP images don't need this treatment).
-
-### Modifying the sticker_packs.wasticker file
-In Xcode, you must also modify the 'sticker_packs.wasticker' file. Replace the values of the metadata with your own. A few notes: 
 
 * `name`: the sticker pack's name (128 characters max)
 * `identifier`: The identifier should be unique and can be alphanumeric: a-z, A-Z, 0-9, and the following characters are also allowed "_", "-", "." and " ". The identifier should be less than 128 characters.
@@ -69,7 +39,7 @@ The following fields are optional: `ios_app_store_link`, `android_app_store_link
 
 If your app has more than 1 sticker pack, you will need to reference it in `sticker_packs.wasticker`. Simply create a second array within the "sticker_packs" section of the file and include all the metadata (name, identifier, etc) along with all the references to the sticker files. 
 
-### Required before you publish your app
+### Required 
 You must change the bundle identifier from the one provided. You cannot use anything that includes `WA.WAStickersThirdParty`. This is the only restriction on what you put as a bundle ID.
 
 To change the bundle identifier:
