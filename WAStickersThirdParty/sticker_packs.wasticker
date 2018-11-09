@@ -1,0 +1,71 @@
+{
+"ios_app_store_link" : "http://itunes.apple.com/app/id1441704090",
+    "android_play_store_link" : "https://play.google.com/store/apps/details?id=com.bicicleta.lqstickerpack",
+    "sticker_packs" : [
+    {
+        "identifier": "LoveQuestID01",
+        "name": "Love Quest Stickers",
+        "publisher": "Love Quest",
+        "tray_image_file" : "tray_lovequest.png",
+"publisher_website" : "http://lovequest.bicicleta.com.pe",
+        "privacy_policy_website" : "",
+        "license_agreement_website" : "",
+        "stickers": [
+        {
+            "image_file": "LoveQuestLogo.png",
+            "emojis": ["❤️","♥"]
+        },
+        {
+            "image_file": "Sy_cook.png",
+            "emojis": ["🐼","👨‍🍳"]
+        },
+        {
+            "image_file": "Sy_fix.png",
+            "emojis": ["🐼","🛠"]
+        },
+        {
+            "image_file": "Sy_cat1.png",
+            "emojis": ["🐼", "🐈"]
+        },
+        {
+            "image_file": "Sy_cat2.png",
+            "emojis": ["🐼","😨"]
+        },
+        {
+            "image_file": "Dee_proud.png",
+            "emojis": ["😈","💁‍♀️"]
+        },
+        {
+            "image_file": "Dee_reading.png",
+            "emojis": ["😈","📖"]
+        },
+        {
+            "image_file": "Dee_looking.png",
+            "emojis": ["😈","😙"]
+        },
+        {
+            "image_file": "Dee_excited.png",
+            "emojis": ["😈","☺️"]
+        },
+        {
+            "image_file": "Dee_angry.png",
+            "emojis": ["👿","😡"]
+        },
+        {
+            "image_file": "Vee_worried.png",
+            "emojis": ["🐨","☁"]
+        },
+        {
+            "image_file": "Vee_excl.png",
+            "emojis": ["👸","😱"]
+        },
+        {
+            "image_file": "Vee_crying.png",
+            "emojis": ["👸","😭"]
+        },
+        {
+            "image_file": "Vee_turtle.png",
+            "emojis": ["☁️","🐢"]
+        }]
+    }]
+}
